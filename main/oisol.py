@@ -1,3 +1,4 @@
+import std.basic
 class OISOLError(Exception):
     def __init__(self, msg):
         self.msg = msg
@@ -6,7 +7,7 @@ class OISOLError(Exception):
         return self.msg
     
     def logger(self):
-        pass # Todo: Add log for error.
+        print('[Error] [Unixtime: {}] {}'.format(std.basic.getUnixtime(),self.msg))
 
 class version:
     def __init__(self,num1,num2,num3) -> None:
